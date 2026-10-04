@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lead Impact Corporate | Adhésion</title>
+<meta name="description" content="Formulaire d'adhésion au réseau Lead Impact Corporate">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <img src="logo.jpg" alt="Lead Impact Corporate">
+  </div>
+  <div class="annual">COTISATION ANNUELLE<br><strong>10 000 FCFA</strong></div>
+</header>
+
+<main>
+  <section class="intro">
+    <div>
+      <span class="kicker">RÉSEAU LEAD IMPACT CORPORATE</span>
+      <h1>Rejoignez le réseau</h1>
+      <p>Complétez votre demande d’adhésion. Le formulaire reprend les informations du document d’adhésion fourni par Lead Impact Corporate.</p>
+    </div>
+    <div class="contact-card">
+      <strong>Contact</strong>
+      <span>mariepaulekoffi943@gmail.com</span>
+      <span>Wave : 07 19 56 84 92</span>
+    </div>
+  </section>
+
+  <div class="progress-box">
+    <div><span id="stepTitle">Informations personnelles</span><span id="progressText">1 / 6</span></div>
+    <div class="progress"><i id="progressBar"></i></div>
+  </div>
+
+  <form id="form">
+    <section class="step active" data-title="Informations personnelles">
+      <h2>01 — Informations personnelles</h2>
+      <p class="muted">Vos coordonnées et informations d’identification.</p>
+      <div class="grid">
+        <label>Nom *<input name="nom" required></label>
+        <label>Prénoms *<input name="prenoms" required></label>
+        <label>Date de naissance<input type="date" name="naissance"></label>
+        <label>Sexe<select name="sexe"><option value="">Sélectionner</option><option>Homme</option><option>Femme</option></select></label>
+        <label>Nationalité<input name="nationalite"></label>
+        <label>Ville de résidence<input name="ville"></label>
+        <label>Quartier / Commune<input name="quartier"></label>
+        <label>Numéro de téléphone / WhatsApp *<input name="telephone" required></label>
+        <label>Adresse e-mail *<input type="email" name="email" required></label>
+        <label>Profession / Fonction actuelle<input name="profession"></label>
+      </div>
+    </section>
+
+    <section class="step" data-title="Votre profil Lead Impact">
+      <h2>02 — Votre profil Lead Impact</h2>
+      <p class="muted">Quel profil souhaitez-vous avoir au sein du réseau ?</p>
+      <div class="choices">
+        <label><input type="radio" name="profil" value="Entrepreneur" required><b>Entrepreneur</b><small>Je dirige ou développe une entreprise.</small></label>
+        <label><input type="radio" name="profil" value="Porteur de projet"><b>Porteur de projet</b><small>J’ai une idée ou un projet que je souhaite développer.</small></label>
+        <label><input type="radio" name="profil" value="Financeur"><b>Financeur</b><small>Je souhaite éventuellement participer au financement de projets sélectionnés.</small></label>
+        <label><input type="radio" name="profil" value="Professionnel"><b>Professionnel</b><small>Je souhaite développer mon réseau professionnel.</small></label>
+        <label><input type="radio" name="profil" value="Mentor / Expert"><b>Mentor / Expert</b><small>Je souhaite partager mes compétences et accompagner des entrepreneurs.</small></label>
+        <label><input type="radio" name="profil" value="Partenaire"><b>Partenaire</b><small>Je représente une entreprise ou organisation intéressée par une collaboration.</small></label>
+        <label class="other">Autre<input name="profil_autre"></label>
+      </div>
+    </section>
+
+    <section class="step" data-title="Situation professionnelle">
+      <h2>03 — Situation professionnelle</h2>
+      <p class="muted">Votre situation actuelle et votre domaine d’activité.</p>
+      <div class="grid">
+        <label>Situation actuelle<select name="situation" required><option value="">Sélectionner</option><option>Étudiant(e)</option><option>Élève / apprenant(e)</option><option>Salarié(e)</option><option>Entrepreneur(e)</option><option>Travailleur indépendant / Freelance</option><option>Demandeur(se) d’emploi</option><option>Investisseur / Financeur</option><option>Autre</option></select></label>
+        <label>Domaine d’activité<select name="domaine" required><option value="">Sélectionner</option><option>Agriculture / Agroalimentaire</option><option>Commerce</option><option>Éducation / Formation</option><option>Technologie / Numérique</option><option>Finance</option><option>BTP / Immobilier</option><option>Transport / Logistique</option><option>Santé</option><option>Mode / Beauté</option><option>Industrie</option><option>Tourisme</option><option>Restauration / Hôtellerie</option><option>Communication / Médias</option><option>Artisanat</option><option>Services</option><option>Autre</option></select></label>
+      </div>
+    </section>
+
+    <section class="step" data-title="Entreprise ou projet">
+      <h2>04 — Informations sur votre entreprise ou projet</h2>
+      <div class="grid">
+        <label>Avez-vous actuellement une entreprise ?<select name="entreprise_existe"><option value="">Sélectionner</option><option>Oui</option><option>Non</option></select></label>
+        <label>Nom de l’entreprise<input name="entreprise_nom"></label>
+        <label>Activité principale<input name="entreprise_activite"></label>
+        <label>Date de création<input type="date" name="entreprise_date"></label>
+        <label>Ville<input name="entreprise_ville"></label>
+        <label>Téléphone professionnel<input name="entreprise_tel"></label>
+        <label>Réseaux sociaux / Site internet<input name="entreprise_web"></label>
+        <label>Avez-vous un projet ?<select name="projet_existe"><option value="">Sélectionner</option><option>Oui</option><option>Non</option></select></label>
+      </div>
+      <label>Description brève du projet<textarea name="projet_description" rows="5"></textarea></label>
+    </section>
+
+    <section class="step" data-title="Attentes et financement">
+      <h2>05 — Vos attentes, financement et contribution</h2>
+      <p class="muted">Sélectionnez les éléments qui correspondent à votre situation.</p>
+      <fieldset><legend>Pourquoi souhaitez-vous rejoindre Lead Impact ?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="attentes" value="Développer mon réseau professionnel"> Développer mon réseau professionnel</label>
+          <label><input type="checkbox" name="attentes" value="Acquérir de nouvelles compétences"> Acquérir de nouvelles compétences</label>
+          <label><input type="checkbox" name="attentes" value="Trouver des clients"> Trouver des clients</label>
+          <label><input type="checkbox" name="attentes" value="Trouver des partenaires"> Trouver des partenaires</label>
+          <label><input type="checkbox" name="attentes" value="Trouver un mentor"> Trouver un mentor</label>
+          <label><input type="checkbox" name="attentes" value="Opportunités d’investissement / financement"> Opportunités d’investissement / financement</label>
+          <label><input type="checkbox" name="attentes" value="Faire connaître mon entreprise"> Faire connaître mon entreprise</label>
+          <label><input type="checkbox" name="attentes" value="Développer mon projet"> Développer mon projet</label>
+          <label><input type="checkbox" name="attentes" value="Rechercher un financement"> Rechercher un financement</label>
+          <label><input type="checkbox" name="attentes" value="Participer aux formations"> Participer aux formations</label>
+          <label><input type="checkbox" name="attentes" value="Participer aux événements"> Participer aux événements</label>
+          <label><input type="checkbox" name="attentes" value="Échanger avec d’autres entrepreneurs"> Échanger avec d’autres entrepreneurs</label>
+        </div>
+      </fieldset>
+      <div class="grid">
+        <label>Recherche de financement ?<select name="financement"><option value="">Sélectionner</option><option>Oui</option><option>Non</option><option>Pas actuellement, mais éventuellement à l’avenir</option></select></label>
+        <label>Montant recherché<select name="montant_financement"><option value="">Sélectionner</option><option>Moins de 500 000 FCFA</option><option>500 000 à 1 000 000 FCFA</option><option>1 000 001 à 5 000 000 FCFA</option><option>5 000 001 à 10 000 000 FCFA</option><option>Plus de 10 000 000 FCFA</option></select></label>
+        <label>Montant estimatif (FCFA)<input type="number" name="montant_estime"></label>
+      </div>
+      <label>Quelles compétences pourriez-vous partager avec les autres membres ?<textarea name="expertise" rows="4"></textarea></label>
+      <div class="grid">
+        <label>Comment avez-vous connu Lead Impact Corporate ?<select name="source"><option value="">Sélectionner</option><option>Facebook</option><option>TikTok</option><option>WhatsApp</option><option>Instagram</option><option>LinkedIn</option><option>Événement Lead Impact</option><option>Recommandation d’un membre</option><option>Partenaire</option><option>Autre</option></select></label>
+        <label>Nom du membre qui vous a recommandé<input name="recommande_par"></label>
+      </div>
+    </section>
+
+    <section class="step" data-title="Validation et paiement externe">
+      <h2>06 — Validation et paiement externe</h2>
+      <div class="notice">
+        <strong>Cotisation annuelle : 10 000 FCFA</strong>
+        <p>Le paiement de la cotisation se fait en externe. Après paiement, joignez votre preuve de paiement ci-dessous. Elle sera partagée avec votre demande via WhatsApp.</p>
+      </div>
+      <fieldset><legend>Autorisation de communication</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="communication" value="Informations sur les formations"> Informations sur les formations</label>
+          <label><input type="checkbox" name="communication" value="Invitations aux événements"> Invitations aux événements</label>
+          <label><input type="checkbox" name="communication" value="Opportunités professionnelles"> Opportunités professionnelles</label>
+          <label><input type="checkbox" name="communication" value="Informations sur les programmes de financement"> Informations sur les programmes de financement</label>
+          <label><input type="checkbox" name="communication" value="Informations concernant la vie du réseau"> Informations concernant la vie du réseau</label>
+          <label><input type="checkbox" name="communication" value="Offres des partenaires, lorsque cela est prévu et autorisé"> Offres des partenaires, lorsque cela est prévu et autorisé</label>
+        </div>
+      </fieldset>
+      <label class="consent"><input type="checkbox" name="certification" required> Je certifie que les informations fournies sont exactes et reconnais avoir pris connaissance des principes d’adhésion au réseau Lead Impact Corporate. *</label>
+      <div class="payment-proof">
+        <strong>Paiement externe</strong>
+        <p>Effectuez le paiement de la cotisation en externe, puis sélectionnez votre preuve de paiement (photo ou PDF). Au moment de l’envoi, WhatsApp sera ouvert avec toutes les informations de la demande et la preuve pourra être partagée avec le message.</p>
+        <label>Preuve de paiement *<input type="file" id="paymentProof" name="paymentProof" accept="image/*,.pdf" required></label>
+      </div>
+      <div class="grid">
+        <label>Nom et prénom pour validation *<input name="validation_nom" required></label>
+        <label>Date *<input type="date" name="validation_date" required></label>
+      </div></section>
+
+    <div class="actions">
+      <button type="button" class="secondary" id="prev">Précédent</button>
+      <button type="button" class="primary" id="next">Continuer</button>
+      <button type="submit" class="primary hidden" id="submitBtn">Valider ma demande</button>
+    </div>
+  </form>
+
+  <section class="success hidden" id="success">
+    <div class="success-icon">✓</div>
+    <h2>Demande enregistrée pour le test</h2>
+    <p>Le formulaire a été préparé. Dans la version Cloudflare finale, ces informations seront envoyées automatiquement à l’adresse e-mail de Lead Impact Corporate.</p>
+    <div class="summary" id="summary"></div>
+    <button class="primary" onclick="location.reload()">Nouvelle adhésion</button>
+  </section>
+</main>
+
+<footer>
+  <span>Lead Impact Corporate</span>
+  <span>mariepaulekoffi943@gmail.com</span>
+  <span>Wave : 07 19 56 84 92</span>
+</footer>
+
+<script>
+const steps=[...document.querySelectorAll('.step')];
+let current=0;
+const form=document.getElementById('form');
+const next=document.getElementById('next'), prev=document.getElementById('prev'), submit=document.getElementById('submitBtn');
+const bar=document.getElementById('progressBar'), stepTitle=document.getElementById('stepTitle'), progressText=document.getElementById('progressText');
+
+function update(){
+  steps.forEach((s,i)=>s.classList.toggle('active',i===current));
+  stepTitle.textContent=steps[current].dataset.title;
+  progressText.textContent=(current+1)+' / '+steps.length;
+  bar.style.width=((current+1)/steps.length*100)+'%';
+  prev.style.visibility=current===0?'hidden':'visible';
+  next.classList.toggle('hidden',current===steps.length-1);
+  submit.classList.toggle('hidden',current!==steps.length-1);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function validateStep(){
+  const fields=steps[current].querySelectorAll('input,select,textarea');
+  for(const f of fields){
+    if(!f.checkValidity()){f.reportValidity(); return false;}
+  }
+  return true;
+}
+next.onclick=()=>{if(validateStep() && current<steps.length-1){current++;update();}};
+prev.onclick=()=>{if(current>0){current--;update();}};
+form.addEventListener('submit', async e=>{
+  e.preventDefault();
+  if(!validateStep()) return;
+
+  const fd = new FormData(form);
+  const get = n => fd.get(n) || '—';
+  const getAll = n => fd.getAll(n).filter(Boolean).join(', ') || '—';
+  const proof = document.getElementById('paymentProof');
+
+  if(!proof || !proof.files || !proof.files.length){
+    alert('Veuillez joindre votre preuve de paiement.');
+    return;
+  }
+
+  const proofFile = proof.files[0];
+  const maxSize = 10 * 1024 * 1024;
+  if(proofFile.size > maxSize){
+    alert('La preuve de paiement ne doit pas dépasser 10 Mo.');
+    return;
+  }
+
+  const message =
+`*NOUVELLE DEMANDE D’ADHÉSION — LEAD IMPACT CORPORATE*
+
+*1. INFORMATIONS PERSONNELLES*
+Nom : ${get('nom')}
+Prénoms : ${get('prenoms')}
+Date de naissance : ${get('naissance')}
+Sexe : ${get('sexe')}
+Nationalité : ${get('nationalite')}
+Ville : ${get('ville')}
+Quartier / Commune : ${get('quartier')}
+Téléphone / WhatsApp : ${get('telephone')}
+E-mail : ${get('email')}
+Profession / Fonction : ${get('profession')}
+
+*2. PROFIL LEAD IMPACT*
+Profil : ${get('profil')}
+Autre profil : ${get('profil_autre')}
+
+*3. SITUATION PROFESSIONNELLE*
+Situation : ${get('situation')}
+Domaine : ${get('domaine')}
+
+*4. ENTREPRISE / PROJET*
+Entreprise existante : ${get('entreprise_existe')}
+Nom entreprise : ${get('entreprise_nom')}
+Activité principale : ${get('entreprise_activite')}
+Date de création : ${get('entreprise_date')}
+Ville entreprise : ${get('entreprise_ville')}
+Téléphone professionnel : ${get('entreprise_tel')}
+Site / Réseaux sociaux : ${get('entreprise_web')}
+Projet : ${get('projet_existe')}
+Description : ${get('projet_description')}
+
+*5. ATTENTES / FINANCEMENT*
+Attentes : ${getAll('attentes')}
+Recherche de financement : ${get('financement')}
+Montant recherché : ${get('montant_financement')}
+Montant estimatif : ${get('montant_estime')} FCFA
+Compétences à partager : ${get('expertise')}
+Source : ${get('source')}
+Recommandé par : ${get('recommande_par')}
+
+*6. VALIDATION*
+Communications autorisées : ${getAll('communication')}
+Nom pour validation : ${get('validation_nom')}
+Date : ${get('validation_date')}
+
+*PAIEMENT*
+Cotisation : 10 000 FCFA
+Mode : paiement externe
+Preuve sélectionnée : ${proofFile.name}
+
+Merci de traiter cette demande.`;
+
+  const whatsappNumber = '2250700156339';
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+  // Android/Chrome : partage direct du message + fichier via la feuille de partage.
+  // L'utilisateur choisit WhatsApp, puis le contact +225 07 00 15 63 39.
+  if(navigator.share && navigator.canShare){
+    try{
+      const shareFile = new File([await proofFile.arrayBuffer()], proofFile.name, {type: proofFile.type || 'application/octet-stream'});
+      if(navigator.canShare({files:[shareFile]})){
+        await navigator.share({
+          title: 'Demande Lead Impact Corporate',
+          text: message,
+          files: [shareFile]
+        });
+      } else {
+        window.location.href = whatsappUrl;
+        alert('WhatsApp est ouvert avec les informations. Joignez ensuite la preuve de paiement sélectionnée, puis envoyez.');
+      }
+    }catch(err){
+      if(err && err.name !== 'AbortError'){
+        window.location.href = whatsappUrl;
+        alert('WhatsApp est ouvert avec les informations. Joignez ensuite la preuve de paiement sélectionnée, puis envoyez.');
+      }
+    }
+  }else{
+    window.location.href = whatsappUrl;
+    alert('WhatsApp est ouvert avec les informations. Joignez ensuite la preuve de paiement sélectionnée, puis envoyez.');
+  }
+
+  form.classList.add('hidden');
+  document.querySelector('.progress-box').classList.add('hidden');
+  document.querySelector('.intro').classList.add('hidden');
+  document.getElementById('success').classList.remove('hidden');
+
+  const summary = document.getElementById('summary');
+  if(summary){
+    summary.innerHTML =
+      `<p><b>Adhérent :</b> ${escapeHtml(get('nom'))} ${escapeHtml(get('prenoms'))}</p>
+       <p><b>E-mail :</b> ${escapeHtml(get('email'))}</p>
+       <p><b>Téléphone :</b> ${escapeHtml(get('telephone'))}</p>
+       <p><b>Profil :</b> ${escapeHtml(get('profil'))}</p>
+       <p><b>Cotisation :</b> 10 000 FCFA</p>
+       <p><b>Paiement :</b> externe</p>
+       <p><b>Preuve :</b> ${escapeHtml(proofFile.name)}</p>
+       <p><b>Transmission :</b> WhatsApp</p>`;
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}););
+function escapeHtml(v){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+update();
+</script>
+</body>
+</html>
