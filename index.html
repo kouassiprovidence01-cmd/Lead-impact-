@@ -202,6 +202,7 @@ function update(){
   submit.classList.toggle('hidden',current!==steps.length-1);
   window.scrollTo({top:0,behavior:'smooth'});
 }
+
 function validateStep(){
   const fields=steps[current].querySelectorAll('input,select,textarea');
   for(const f of fields){
@@ -209,8 +210,10 @@ function validateStep(){
   }
   return true;
 }
+
 next.onclick=()=>{if(validateStep() && current<steps.length-1){current++;update();}};
 prev.onclick=()=>{if(current>0){current--;update();}};
+
 form.addEventListener('submit',e=>{
   e.preventDefault();
   if(!validateStep()) return;
@@ -229,12 +232,23 @@ form.addEventListener('submit',e=>{
   document.getElementById('success').classList.remove('hidden');
   window.scrollTo({top:0,behavior:'smooth'});
 });
+
 const modal=document.getElementById('waveModal');
 document.getElementById('waveBtn').onclick=()=>modal.classList.remove('hidden');
 document.getElementById('closeModal').onclick=()=>modal.classList.add('hidden');
 document.getElementById('confirmTest').onclick=()=>{modal.classList.add('hidden'); alert('Mode test : le paiement réel Wave n’est pas encore connecté.');};
-function escapeHtml(v){return String(v).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+
+function escapeHtml(v){
+  return String(v).replace(/[&<>"']/g,m=>({
+    '&':'&amp;',
+    '<':'&lt;',
+    '>':'&gt;',
+    '"':'&quot;',
+    "'":'&#039;'
+  }[m]));
+}
+
 update();
 </script>
 </body>
-</html>
+        </html>
